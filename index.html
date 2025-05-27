@@ -1,0 +1,80 @@
+from pathlib import Path
+import shutil
+
+# Define the structure for Fred Danjuma's personal portfolio site
+project_root = Path("/mnt/data/fred-danjuma-portfolio")
+assets_dir = project_root / "assets"
+images_dir = assets_dir / "images"
+docs_dir = assets_dir / "docs"
+
+# Create necessary directories
+images_dir.mkdir(parents=True, exist_ok=True)
+docs_dir.mkdir(parents=True, exist_ok=True)
+
+# Sample HTML content for the personal portfolio
+index_html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fred Danjuma | Backend Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header, footer { background-color: #343a40; color: white; padding: 1rem 0; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .profile-img { max-width: 200px; border-radius: 50%; }
+    </style>
+</head>
+<body>
+    <header class="text-center">
+        <h1>Fred Danjuma</h1>
+        <p>Backend Engineer | Software Developer</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="text-center p-5">
+        <img src="assets/images/Fred DanjumaAlx.jpg" alt="Fred Danjuma" class="profile-img mb-3" />
+        <h2>Welcome!</h2>
+        <p>This is the official portfolio site of Fred Danjuma, a passionate backend engineer with a flair for solving real-world problems using technology.</p>
+    </section>
+
+    <section id="about" class="p-5">
+        <h2>About Me</h2>
+        <p>Fred Danjuma is a backend software engineer with experience in Python, Flask, Node.js, and databases like PostgreSQL and MongoDB. He is currently enrolled in the ALX Software Engineering program, where he's building scalable applications and systems.</p>
+    </section>
+
+    <section id="portfolio" class="p-5">
+        <h2>My Portfolio</h2>
+        <ul>
+            <li><a href="https://github.com/Freddanjuma/TravellersXperience.com" target="_blank">TravellersXperience.com (Travel Project)</a></li>
+            <li><a href="assets/docs/FRED DANJUMA UPDATED resume2 (1).docx" target="_blank">Download My Resume (DOCX)</a></li>
+        </ul>
+    </section>
+
+    <section id="contact" class="p-5">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:Freddanjuma247@gmail.com">Freddanjuma247@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Freddanjuma" target="_blank">github.com/Freddanjuma</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/fred-danjuma-b9180a366" target="_blank">fred-danjuma-b9180a366</a></p>
+        <p>Phone: 0540879352 | 0599257835</p>
+    </section>
+
+    <footer class="text-center">
+        <p>&copy; 2025 Fred Danjuma</p>
+    </footer>
+</body>
+</html>
+"""
+
+# Write the HTML file
+index_html_path = project_root / "index.html"
+index_html_path.write_text(index_html_content)
+
+project_root.name  # Returning the folder name created for clarity in download link
