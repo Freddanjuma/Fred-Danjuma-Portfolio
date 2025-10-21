@@ -1,0 +1,170 @@
+# 🧠 Modern Developer Command-Line Cheat Sheet  
+*A colorful and practical guide for everyday developers — from Python to Docker, Git, and beyond.*
+
+---
+
+## 🐍 Python & Virtual Environments
+
+| Command | Description |
+|----------|--------------|
+| `python --version` | Check Python version |
+| `python manage.py runserver` | Start Django development server |
+| `python manage.py makemigrations` | Create migrations for models |
+| `python manage.py migrate` | Apply database migrations |
+| `python manage.py createsuperuser` | Create admin user |
+| `python manage.py shell` | Open Django shell |
+| `python manage.py startapp blog` | Start a new Django app |
+| `python manage.py collectstatic` | Collect all static files |
+| `python manage.py test` | Run all Django tests |
+| `python -m venv venv` | Create a virtual environment |
+| `source venv/bin/activate` | Activate venv (Linux/Mac) |
+| `venv\Scripts\activate` | Activate venv (Windows) |
+| `deactivate` | Exit the virtual environment |
+| `pip install -r requirements.txt` | Install dependencies |
+| `pip freeze > requirements.txt` | Save installed packages |
+| `python script.py` | Run a Python script |
+| `pytest` | Run tests using pytest |
+| `black .` | Auto-format code using Black |
+
+---
+
+## 💾 Git & GitHub Essentials
+
+| Command | Description |
+|----------|--------------|
+| `git init` | Initialize a Git repository |
+| `git status` | Check file changes |
+| `git add .` | Stage all files |
+| `git commit -m "message"` | Commit staged files |
+| `git push origin main` | Push to remote main branch |
+| `git pull origin main` | Pull from main branch |
+| `git clone <repo_url>` | Clone a remote repo |
+| `git branch` | List branches |
+| `git checkout -b new-feature` | Create/switch to new branch |
+| `git merge new-feature` | Merge branch into main |
+| `git log --oneline` | View concise commit history |
+| `git diff` | Show code differences |
+| `git reset --hard HEAD~1` | Undo last commit |
+| `git stash` | Temporarily save changes |
+| `git stash pop` | Restore stashed changes |
+| `git tag -a v1.0 -m "Version 1"` | Tag release version |
+| `git push origin --tags` | Push tags to remote |
+
+---
+
+## 🐳 Docker & Containers
+
+| Command | Description |
+|----------|--------------|
+| `docker --version` | Check Docker version |
+| `docker ps` | List running containers |
+| `docker images` | List Docker images |
+| `docker build -t myapp .` | Build image from Dockerfile |
+| `docker run -p 8000:8000 myapp` | Run container with port mapping |
+| `docker-compose up` | Start containers with Docker Compose |
+| `docker-compose down` | Stop and remove containers |
+| `docker stop <container_id>` | Stop a running container |
+| `docker rm <container_id>` | Remove a container |
+| `docker rmi <image_id>` | Remove an image |
+| `docker exec -it <id> bash` | Access container shell |
+| `docker logs <id>` | View container logs |
+| `docker system prune -a` | Clean up unused data |
+
+---
+
+## 🌐 Node.js & npm
+
+| Command | Description |
+|----------|--------------|
+| `node -v` | Check Node.js version |
+| `npm -v` | Check npm version |
+| `npm init -y` | Create a `package.json` file |
+| `npm install express` | Install Express.js |
+| `npm run dev` | Run development server |
+| `npm install --save` | Save package as dependency |
+| `npm install --save-dev jest` | Install dev dependency |
+| `npx create-react-app myapp` | Create a React app |
+| `npm start` | Start Node.js app |
+| `npm run build` | Build for production |
+| `npm outdated` | Check outdated packages |
+| `npm update` | Update dependencies |
+| `npx nodemon server.js` | Auto-restart Node server |
+
+---
+
+## 🧰 Linux & Terminal Basics
+
+| Command | Description |
+|----------|--------------|
+| `ls -la` | List files (detailed) |
+| `cd /path/to/folder` | Change directory |
+| `mkdir project` | Create new directory |
+| `rm -rf folder` | Delete directory |
+| `cp file1.py file2.py` | Copy file |
+| `mv old.py new.py` | Rename or move file |
+| `touch app.py` | Create empty file |
+| `cat file.txt` | View file content |
+| `grep "search_term" file.txt` | Search inside file |
+| `sudo apt update` | Update system packages |
+| `sudo apt install python3-pip` | Install pip |
+| `clear` | Clear terminal |
+| `pwd` | Show current directory |
+| `top` | Show active processes |
+| `history` | Show recent commands |
+
+---
+
+## 🗄️ Database (PostgreSQL & MySQL)
+
+| Command | Description |
+|----------|--------------|
+| `psql -U postgres` | Connect to PostgreSQL |
+| `\l` | List all databases |
+| `\c mydb` | Connect to database |
+| `\dt` | List tables |
+| `SELECT * FROM users;` | Query all records |
+| `CREATE DATABASE blog;` | Create database |
+| `DROP DATABASE test;` | Delete database |
+| `python manage.py dbshell` | Open Django DB shell |
+| `mysql -u root -p` | Access MySQL shell |
+| `show databases;` | Show MySQL databases |
+| `show tables;` | List MySQL tables |
+
+---
+
+## ☁️ Deployment & API Testing
+
+| Command | Description |
+|----------|--------------|
+| `heroku login` | Log in to Heroku |
+| `heroku create myapp` | Create Heroku app |
+| `git push heroku main` | Deploy to Heroku |
+| `heroku logs --tail` | Stream logs |
+| `python manage.py check --deploy` | Check for deploy issues |
+| `ngrok http 8000` | Create public link to localhost |
+| `curl http://127.0.0.1:8000/api/books/` | Test API endpoint |
+| `pytest --maxfail=1 --disable-warnings -q` | Run concise test |
+| `code .` | Open folder in VS Code |
+| `npm audit fix` | Fix security vulnerabilities |
+| `docker-compose logs` | Show Docker logs |
+| `git push -u origin main` | Push with upstream |
+| `python manage.py dumpdata > db.json` | Backup data to JSON |
+
+---
+
+## 💡 Pro Tip
+
+> “Automation and consistency win the long game.  
+>  Always document your workflows, version your code, and containerize when scaling.”
+
+---
+
+### ✨ Author: Fred Danjuma
+**Back-End Developer | Python • Django • Docker • REST APIs**
+
+📁 *Perfect for showcasing for technical workflow on GitHub or in a developer portfolio.*
+
+---
+
+
+
